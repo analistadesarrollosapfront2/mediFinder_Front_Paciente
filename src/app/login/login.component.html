@@ -1,0 +1,21 @@
+<div class="login">
+  <form class="custom-form" (ngSubmit)="login()" #loginForm="ngForm">
+    <h1>Login</h1>
+    <input
+      type="email"
+      [(ngModel)]="email"
+      name="email"
+      placeholder="Email"
+      required
+    />
+    <input
+      type="password"
+      [(ngModel)]="password"
+      name="password"
+      placeholder="Password"
+      required
+    />
+    <button type="submit">Log in</button>
+    <p class="registro">No tienes una cuenta? <a routerLink="/register">Regístrate aquí</a></p>
+  </form>
+</div>

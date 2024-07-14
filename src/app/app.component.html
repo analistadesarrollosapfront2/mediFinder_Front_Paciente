@@ -1,22 +1,5 @@
-
-<app-sidebar></app-sidebar>
-
-
-
-
-<button
-pButton
-pRipple
-label="Submit"
-class="p-button-success">
-</button>
-
-
-
-<i class="pi pi-spin pi-spinner" style="font-size: 2rem"></i>
-<i class="pi pi-spin pi-cog" style="font-size: 2rem"></i>
-<i class="pi pi-check"></i>
-<i class="pi pi-times"></i>
-<span class="pi pi-search"></span>
-<span class="pi pi-user"></span>
-<router-outlet />
+<div *ngIf="showSidebar">
+    <app-sidebar></app-sidebar>
+  </div>
+  <router-outlet></router-outlet>
+  
