@@ -1,0 +1,95 @@
+/* Contenedor de la búsqueda */
+.search-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-container h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #4CAF50; /* Color principal */
+}
+
+.search-container input {
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Contenedor de las tarjetas */
+.cards-container {
+  margin-top: 20px;
+}
+
+/* Tarjeta de doctor */
+.doctor-card {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden; /* Para asegurar que la imagen no se salga de los bordes */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.doctor-card .doctor-image {
+  width: 53%;
+  height: 242px;
+  object-fit: cover;
+  border-radius: 55%;
+  border: 3px solid #313556;
+}
+
+.doctor-card h3 {
+  font-size: 20px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.doctor-card p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.doctor-card p strong {
+  color: #4CAF50; /* Color principal */
+}
+
+/* No se encontraron resultados */
+.no-results {
+  text-align: center;
+  font-size: 18px;
+  color: #f44336; /* Rojo */
+  margin-top: 20px;
+}
+
+/* Estilos responsivos para tarjetas */
+.p-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.p-col-12 {
+  width: 100%;
+}
+
+.p-md-4 {
+  flex: 1;
+  max-width: calc(33.333% - 20px); /* Ajusta el tamaño de las columnas en 3 por fila, restando el espacio del gap */
+}
+
+/* Estilos para el pie de la tarjeta */
+.card-footer {
+  padding: 10px;
+  border-top: 1px solid #eee; /* Borde superior para separar el contenido del pie */
+  display: flex;
+  justify-content: center;
+}
+
+.request-button {
+  width: 100%;
+  max-width: 200px; /* Ajusta el tamaño del botón según sea necesario */
+}

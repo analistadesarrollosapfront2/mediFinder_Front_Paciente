@@ -1,61 +1,122 @@
 <div class="register">
   <form class="custom-form" method="post" (ngSubmit)="register()" #registerForm="ngForm">
     <h1>Register</h1>
-    <input
-      type="text"
-      [(ngModel)]="nombre"
-      name="nombre"
-      placeholder="Nombre"
-      required
-    />
-    <input
-      type="text"
-      [(ngModel)]="apellido"
-      name="apellido"
-      placeholder="Apellido"
-      required
-    />
-    <input
-      type="email"
-      [(ngModel)]="email"
-      name="email"
-      placeholder="Email"
-      required
-    />
-    <input
-      type="password"
-      [(ngModel)]="password"
-      name="password"
-      placeholder="Password"
-      required
-    />
-    <input
-      type="password"
-      [(ngModel)]="confirmPassword"
-      name="confirmPassword"
-      placeholder="Repeat the password"
-      required
-    />
-    <input
-      type="tel"
-      [(ngModel)]="telefono"
-      name="telefono"
-      placeholder="Telefono"
-      required
-    />
-    <input
-      type="date"
-      [(ngModel)]="fechaNacimiento"
-      name="fechaNacimiento"
-      placeholder="Fecha de Nacimiento"
-      required
-    />
-    <select [(ngModel)]="sexo" name="sexo" required>
-      <option value="" disabled selected>Sexo</option>
-      <option value="Masculino">Masculino</option>
-      <option value="Femenino">Femenino</option>
-    </select>
 
-    <button type="submit">Register</button>
+    <div style="
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <label for="nombre">Nombre</label>
+        <input
+          type="text"
+          [(ngModel)]="nombre"
+          name="nombre"
+          id="nombre"
+          placeholder="Nombre"
+          required
+          #nombreInput="ngModel"
+        />
+      </div>
+      <div class="col-12 col-md-6">
+        <label for="apellido">Apellido</label>
+        <input
+          type="text"
+          [(ngModel)]="apellido"
+          name="apellido"
+          id="apellido"
+          placeholder="Apellido"
+          required
+          #apellidoInput="ngModel"
+        />
+      </div>
+      <div class="col-12 col-md-6">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          [(ngModel)]="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+          required
+          #emailInput="ngModel"
+        />
+      </div>
+      <div class="col-12 col-md-6">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          [(ngModel)]="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          required
+          #passwordInput="ngModel"
+        />
+      </div>
+    </div>
+    <div>
+      <div class="col-12 col-md-6">
+        <label for="confirmPassword">Repeat the password</label>
+        <input
+          type="password"
+          [(ngModel)]="confirmPassword"
+          name="confirmPassword"
+          id="confirmPassword"
+          placeholder="Repeat the password"
+          required
+          #confirmPasswordInput="ngModel"
+        />
+      </div>
+      <div class="col-8 col-md-6">
+        <label for="telefono">Telefono</label>
+        <input
+          type="tel"
+          [(ngModel)]="telefono"
+          name="telefono"
+          id="telefono"
+          placeholder="Telefono"
+          required
+          #telefonoInput="ngModel"
+        />
+      </div>
+      <div class="col-12 col-md-6">
+        <label for="fechaNacimiento">Fecha de Nacimiento</label>
+        <input
+          type="date"
+          [(ngModel)]="fechaNacimiento"
+          name="fechaNacimiento"
+          id="fechaNacimiento"
+          placeholder="Fecha de Nacimiento"
+          required
+          #fechaNacimientoInput="ngModel"
+        />
+      </div>
+      <div class="col-12 col-md-6">
+        <label for="sexo">Sexo</label>
+        <select [(ngModel)]="sexo" name="sexo" id="sexo" required #sexoInput="ngModel">
+          <option value="" disabled selected>Sexo</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Femenino">Femenino</option>
+        </select>
+      </div>
+    </div>
+  </div>
+    <button
+      style="margin-top: 2%;"
+      type="submit"
+      [disabled]="!registerForm.form.valid">
+      Register
+    </button>
+    <a routerLink="/login" class="back-to-login">
+      <i class="pi pi-arrow-left"></i> Regresar al Login
+    </a>
+
   </form>
+
 </div>
+
+

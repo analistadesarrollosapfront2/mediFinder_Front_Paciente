@@ -1,1 +1,61 @@
-<p>home works!</p>
+<div class="home-container">
+  <div class="search-section">
+    <h1>Encuentra tu especialista y pide cita</h1>
+    <p>Los profesionales están aquí para ayudarte.</p>
+  </div>
+
+  <div class="specialties-section">
+    <div class="specialties">
+      <div *ngFor="let especialidad of especialidades">
+        <p-chip [label]="especialidad.nombre" class="custom-chip"></p-chip>
+      </div>
+    </div>
+  </div>
+
+  <div class="beneficios">
+  <p-fieldset legend="Encuentra tu especialista">
+    <p class="m-0">
+      Las opiniones reales de miles de pacientes te ayudarán a tomar siempre la mejor decisión.
+    </p>
+</p-fieldset>
+<p-fieldset legend="Pide cita de forma fácil">
+  <p class="m-0">
+    Elige la hora que prefieras y pide cita sin necesidad de llamar. Es fácil, cómodo y muy rápido.
+  </p>
+</p-fieldset>
+<p-fieldset legend="Recordatorios ">
+  <p class="m-0">
+    Te confirmamos la cita al instante y te enviamos un recordatorio a tu celular antes de la cita.
+  </p>
+</p-fieldset>
+<p-fieldset legend="Sin costos añadidos">
+  <p class="m-0">
+    La reserva de cita es un servicio gratuito de Doctoralia.
+  </p>
+</p-fieldset>
+</div>
+
+
+<p-splitter class="ContentSpliter"
+    [panelSizes]="[70, 30]"
+    [style]="{
+      height: '250px',
+    }"
+    styleClass="mb-5">
+    <ng-template pTemplate>
+        <div class="texto-estilo">
+          "Cuando necesité encontrar un especialista de manera rápida y eficiente, Medifinder fue mi salvación. La plataforma me permitió buscar por especialidad, ubicación y disponibilidad, lo que facilitó enormemente mi búsqueda. Al encontrar al doctor ideal, agendé la cita de inmediato. Durante la consulta, me sentí muy a gusto gracias a la amabilidad y profesionalismo del médico. Me explicó todo con claridad y resolvió todas mis dudas. Sin duda, Medifinder ha revolucionado la forma en que accedo a servicios de salud."
+        </div>
+    </ng-template>
+    <ng-template pTemplate>
+        <div class="col flex align-items-center justify-content-center">
+          <img src="/src/assets/img/portada.jpg" alt="Descripcion" class="imagen-personalizada" />
+        </div>
+    </ng-template>
+</p-splitter>
+
+
+</div>
+
+
+

@@ -18,13 +18,32 @@ import { HttpClientModule } from "@angular/common/http";
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthGuard } from './auth.guard';
+import { MenubarModule } from 'primeng/menubar';
+import { DividerModule } from 'primeng/divider';
+import { InputTextModule } from 'primeng/inputtext';
+import { PasswordModule } from 'primeng/password';
+import { CalendarModule } from 'primeng/calendar';
+import { DropdownModule } from 'primeng/dropdown';
+import { SplitterModule } from 'primeng/splitter';
+import { FieldsetModule } from 'primeng/fieldset';
+import { ChipModule } from 'primeng/chip';
+import { PerfilComponent } from './perfil/perfil.component';
+import { BusquedaDocComponent } from './busqueda-doc/busqueda-doc.component';
+import { CardModule } from 'primeng/card';
+import { RecetasComponent } from './recetas/recetas.component';
+import { CalificacionComponent } from './calificacion/calificacion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    PerfilComponent,
+    BusquedaDocComponent,
+    RecetasComponent,
+    CalificacionComponent
+
   ],
   imports: [
     BrowserModule,
@@ -38,7 +57,20 @@ import { AuthGuard } from './auth.guard';
     CommonModule,
     AvatarModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MenubarModule,
+    DividerModule,
+    InputTextModule,
+    PasswordModule,
+    CalendarModule,
+    DropdownModule,
+    SplitterModule,
+    FieldsetModule,
+    ChipModule,
+    CardModule,
+
+
+
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

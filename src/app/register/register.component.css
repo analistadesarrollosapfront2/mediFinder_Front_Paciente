@@ -3,47 +3,56 @@
 * {
   box-sizing: border-box;
 }
-html,
-body {
-  background: #ecf0f3;
+
+html, body {
+  background: #f1f9ff; /* Ajuste a color de fondo más claro */
 }
+
 h1 {
   margin: 0;
   padding: 0;
+  color: #095d7e; /* Color oscuro para el texto del título */
 }
+
 .custom-form {
-  min-width: 300px;
-  max-width: 60%;
+  width: 45%; /* Ajusta el ancho del formulario si es necesario */
   margin: 0px auto;
   background: rgba(255, 255, 255, 0.15);
   padding: 2rem 3rem;
-  margin: auto;
   border-radius: 2.5rem;
-  background-color: #ecf0f3;
+  background-color: #f1f9ff; /* Ajuste a color de fondo más claro */
   box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
-  color: black;
+  color: #095d7e; /* Color oscuro para el texto */
   margin-top: 10rem;
 }
-.custom-form input {
+
+.custom-form label {
   display: block;
-  margin: 2rem 0;
-  width: 100%;
+  margin-bottom: 0.5rem;
+  color: #095d7e; /* Color oscuro para las etiquetas */
+}
+
+.custom-form input,
+.custom-form select {
+  display: block;
+  margin: 1rem 0;
+  width: 20rem;
   border-radius: 0.5rem;
   padding: 1rem;
   border: none;
-  box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px
-      rgba(0, 0, 0, 0.1);
-  border: 0 none;
-  background: #ebf5fc;
+  box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+  background: #d1ffe8;
+  color: #095d7e;
 }
+
 .custom-form button {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   border: none;
   font-size: 0.875rem;
-  color: #ffffff;
+  color: #ffffff; /* Texto blanco */
   font-weight: bold;
-  background-color: #bcd8c1;
+  background-color: #14967f; /* Fondo verde oscuro */
   width: 100%;
   display: block;
   padding: 0.875rem 1rem;
@@ -51,3 +60,22 @@ h1 {
   box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
   cursor: pointer;
 }
+
+.custom-form button:disabled {
+  background-color: #b1b1b1; /* Fondo gris para botón deshabilitado */
+  cursor: not-allowed;
+}
+
+.custom-form .back-to-login {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #14967f; /* Color del enlace */
+}
+
+.custom-form .back-to-login .pi {
+  margin-right: 5px;
+}
+
+

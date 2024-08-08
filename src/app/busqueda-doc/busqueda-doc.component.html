@@ -1,0 +1,34 @@
+<div class="search-container">
+  <h2>Busca a tu médico por especialidad</h2>
+  <input type="text" pInputText placeholder="Introduce especialidad" [(ngModel)]="searchTerm" (input)="filterDoctors()">
+</div>
+
+<div class="cards-container" *ngIf="filteredDoctors.length > 0">
+  <div class="p-grid p-align-stretch">
+    <div class="p-col-12 p-md-4" *ngFor="let doctor of filteredDoctors">
+      <p-card class="doctor-card">
+        <ng-template pTemplate="header">
+          <img src="assets/img/Doc.jpg" alt="Doctor" class="doctor-image">
+        </ng-template>
+        <ng-template pTemplate="content">
+          <h3>{{ doctor.nombre }} {{ doctor.apellido }}</h3>
+          <p><strong>Especialidad:</strong> {{ doctor.especialidad }}</p>
+          <p><strong>Dirección:</strong> {{ doctor.direccion }}</p>
+          <p><strong>Teléfono:</strong> {{ doctor.telefono }}</p>
+          <p><strong>Email:</strong> {{ doctor.email }}</p>
+          <p><strong>Cédula:</strong> {{ doctor.cedula }}</p>
+          <p><strong>Honorarios:</strong> ${{ doctor.honorarios }}</p>
+        </ng-template>
+        <ng-template pTemplate="footer">
+          <div class="card-footer">
+            <p-button label="Solicitar Cita" (click)="requestAppointment(doctor)" class="request-button"></p-button>
+          </div>
+        </ng-template>
+      </p-card>
+    </div>
+  </div>
+</div>
+
+<div class="no-results" *ngIf="filteredDoctors.length === 0">
+  <p>No se encontraron doctores con la especialidad buscada.</p>
+</div>

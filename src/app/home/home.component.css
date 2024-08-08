@@ -1,0 +1,127 @@
+.home-container {
+  text-align: center;
+}
+
+.header {
+  background-color: #00bfa5;
+  padding: 1rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 35px;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.professional-link {
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  color: #00bfa5;
+  font-weight: bold;
+}
+
+.search-section {
+  background-color: #00bfa5;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+.search-section h1 {
+  margin: 0;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.specialties-section, .services-section {
+  padding: 1rem 0;
+  background-color: #f9f9f9;
+}
+
+.specialties, .services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.see-more {
+  display: block;
+  margin-top: 0.5rem;
+  color: #00bfa5;
+  font-weight: bold;
+}
+
+.beneficios{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+::ng-deep .p-fieldset .p-fieldset-legend {
+  font: oblique bold 120% cursive;
+
+  padding: 1.25rem;
+  border: 1.5px solid #e5e7eb;
+  color: #ffffff;
+  background: #3f8b81; /* Color de fondo deseado */
+  font-weight: 700;
+  border-radius: 6px;
+}
+
+.imagen-personalizada {
+  width: 507px;
+  height: 219px;
+  border-radius: 60px;
+}
+
+
+
+.col {
+  display: flex;
+  flex-direction: column; /* Asegura que el texto se alinee en una sola columna */
+  align-items: center; /* Centra el contenido horizontalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+  text-align: center; /* Centra el texto dentro del contenedor */
+  padding: 1rem; /* Añade espacio alrededor del texto */
+  margin: 1rem; /* Añade margen alrededor del contenedor */
+}
+
+.texto-estilo {
+  font-family: 'Arial', sans-serif; /* Cambia la fuente */
+  font-size: 1.1rem; /* Ajusta el tamaño de la fuente */
+  line-height: 1.6; /* Mejora el espaciado entre líneas */
+  color: #333; /* Cambia el color del texto */
+  background-color: #f1f9ff; /* Opcional: Añade un color de fondo sutil */
+  border: 1px solid #095d7e; /* Opcional: Añade un borde sutil alrededor del contenedor */
+  border-radius: 8px; /* Opcional: Redondea los bordes del contenedor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: Añade una sombra sutil */
+}
+
+
+::ng-deep .p-splitter-panel-nested {
+  display: flex;
+  min-width: 0;
+  justify-content: space-around;
+  align-items: center;
+}
+.ContentSpliter{
+  margin: 10%;
+
+}

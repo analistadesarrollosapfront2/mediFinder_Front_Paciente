@@ -6,17 +6,21 @@ import { MegaMenuModule } from 'primeng/megamenu';
 import { AvatarModule } from 'primeng/avatar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-
+import { MenubarModule } from 'primeng/menubar';
+import { DividerModule } from 'primeng/divider';
+import { FooterComponent } from '../footer/footer.component';
 
 
 
 
 @NgModule({
   declarations: [
-    SidebarComponent
+    SidebarComponent,
+    FooterComponent
   ],
   exports:[
-    SidebarComponent
+    SidebarComponent,
+    FooterComponent
   ],
 
   imports: [
@@ -26,6 +30,8 @@ import { FormsModule } from '@angular/forms';
     ButtonModule,
     FormsModule,
     AvatarModule,
+    MenubarModule,
+    DividerModule
   ]
 })
 export class SharedsModule { }

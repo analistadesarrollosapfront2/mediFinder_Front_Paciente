@@ -13,8 +13,8 @@ h1 {
   color: #095d7e; /* Color oscuro para el texto del título */
 }
 .custom-form {
-  min-width: 300px;
-  max-width: 60%;
+  width: 32%;
+  height: 22%;
   margin: 0px auto;
   background: rgba(255, 255, 255, 0.15);
   padding: 2rem 3rem;
@@ -34,7 +34,7 @@ h1 {
   border: none;
   box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px
       rgba(0, 0, 0, 0.1);
-  background: #e2fcd6; /* Fondo verde claro */
+  background: #d1ffe8; /* Fondo verde claro */
   color: #095d7e; /* Texto oscuro */
 }
 .custom-form button {

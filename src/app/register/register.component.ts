@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -6,27 +8,35 @@ import { Component } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-  nombre: string = "";
-  apellido: string = "";
-  email: string = "";
-  password: string = "";
-  confirmPassword: string = "";
-  telefono: string = "";
-  fechaNacimiento: string = "";
-  sexo: string = "";
+  nombre: string = '';
+  apellido: string = '';
+  email: string = '';
+  password: string = '';
+  confirmPassword: string = '';
+  telefono: string = '';
+  fechaNacimiento: Date | null = null;
+  sexo: string = '';
+  sexOptions = [
+    { label: 'Masculino', value: 'Masculino' },
+    { label: 'Femenino', value: 'Femenino' }
+  ];
 
-  constructor() {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   register() {
-    // Aquí puedes agregar la lógica para enviar los datos al backend
-    console.log('Nombre:', this.nombre);
-    console.log('Apellido:', this.apellido);
-    console.log('Email:', this.email);
-    console.log('Password:', this.password);
-    console.log('Confirm Password:', this.confirmPassword);
-    console.log('Telefono:', this.telefono);
-    console.log('Fecha de Nacimiento:', this.fechaNacimiento);
-    console.log('Sexo:', this.sexo);
-    
+    const user = {
+      nombre: this.nombre,
+      apellido: this.apellido,
+      email: this.email,
+      password: this.password,
+      confirmPassword: this.confirmPassword,
+      telefono: this.telefono,
+      fechaNacimiento: this.fechaNacimiento,
+      sexo: this.sexo
+    };
+
+  //  this.authService.register(user).subscribe((data) => {
+  //     // Manejar la respuesta del registro
+  //   });
   }
 }
